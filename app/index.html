@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+
+  <main class="main">
+    <div class="container">
+
+      <div class="file-upload">
+        <header>Загрузка файлов</header>
+        <form action="#">
+        <input id="upload"type="file" class="file-input">
+        <p id="outboxBx">Поместите файл для загрузки</p>
+        </form>
+      </div>
+
+      <section class="wrapper">
+        <h3 class="title">Напишите нам</h3>
+        <form class="form" action="sendmail.php" method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <input type="text" name="name" class="input-field" placeholder="Как к Вам обратиться">
+            <small class="input-alert"></small>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" class="input-field" placeholder="Ваш e-mail">
+            <small class="input-alert"></small>
+          </div>
+          <div class="form-group">
+            <textarea name="message" class="input-field" rows="3" placeholder="Сообщение"></textarea>
+            <small class="input-alert"></small>
+          </div>
+          <div class="form-group">
+            <input type="submit" class="input-submit" value="отправить">
+          </div>
+          <div>
+            <input type="checkbox" name="agree" id="agree" value="yes" />
+            <label for="agree" class="checkbox">Даю согласие на
+              <a href="#"><span>обработку личных данных</span></a>
+            </label>
+            <div id="agree_chk_error">
+              Дайте согласие, чтобы продолжить
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
